@@ -4,6 +4,12 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+    config.cache.auto_detect = true
+  end
+
   config.vm.box = "precise64"
 
   # config.vm.network :forwarded_port, guest: 80, host: 8080
