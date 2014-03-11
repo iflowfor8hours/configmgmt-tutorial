@@ -7,4 +7,10 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package 'python-flask'
+directory '/var/flaskr/data' do
+  recursive true
+end
+
+template '/var/flaskr/flaskr_config.py' do
+  source 'flaskr_config.py.erb'
+end
