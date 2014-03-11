@@ -8,3 +8,4 @@
 #
 
 package 'git'
+package 'python-flask'
