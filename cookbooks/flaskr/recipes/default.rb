@@ -7,5 +7,4 @@
 # All rights reserved - Do Not Redistribute
 #
 
-package 'git'
 package 'python-flask'
