@@ -6,10 +6,11 @@
     A microblog example application written as Flask tutorial with
     Flask and sqlite3.
 
-    :copyright: (c) 2010 by Armin Ronacher.
+    :copyright: (c) 2014 by Armin Ronacher.
     :license: BSD, see LICENSE for more details.
 """
 
+import os
 from sqlite3 import dbapi2 as sqlite3
 from flask import Flask, request, session, g, redirect, url_for, abort, \
      render_template, flash
@@ -20,11 +21,12 @@ app = Flask(__name__)
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
-    DATABASE='/tmp/flaskr.db',
-    DEBUG=True,
+    DATABASE=os.path.join(app.root_path, 'flaskr.db'),
+    DEBUG=False,
     SECRET_KEY='development key',
     USERNAME='admin',
-    PASSWORD='default'
+    PASSWORD='admin',
+    LISTEN_ADDRESS='127.0.0.1'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
@@ -105,4 +107,5 @@ def logout():
 
 if __name__ == '__main__':
     init_db()
-    app.run(host='0.0.0.0')
+    app.run(app.config['LISTEN_ADDRESS'])
+
