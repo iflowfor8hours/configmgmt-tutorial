@@ -1,0 +1,7 @@
+{ 
+  "run_list": [
+    "recipe[flask]",
+    "recipe[flaskr]",
+    "recipe[minitest-handler]" 
+  ]
+}
