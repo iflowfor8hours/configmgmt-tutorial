@@ -24,9 +24,9 @@ app.config.update(dict(
     DATABASE=os.path.join(app.root_path, 'flaskr.db'),
     DEBUG=False,
     SECRET_KEY='development key',
-    USERNAME='admin',
-    PASSWORD='admin',
-    LISTEN_ADDRESS='127.0.0.1'
+    USERNAME='default',
+    PASSWORD='default',
+    LISTEN_ADDRESS='1.2.3.4'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
@@ -108,4 +108,3 @@ def logout():
 if __name__ == '__main__':
     init_db()
     app.run(app.config['LISTEN_ADDRESS'])
-
