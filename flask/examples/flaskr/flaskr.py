@@ -22,11 +22,11 @@ app = Flask(__name__)
 # Load default config and override config from an environment variable
 app.config.update(dict(
     DATABASE=os.path.join(app.root_path, 'flaskr.db'),
-    DEBUG=True,
+    DEBUG=False,
     SECRET_KEY='development key',
     USERNAME='admin',
-    PASSWORD='default',
-    LISTEN_ADDRESS='2.2.2.2'
+    PASSWORD='admin',
+    LISTEN_ADDRESS='127.0.0.1'
 ))
 app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 
