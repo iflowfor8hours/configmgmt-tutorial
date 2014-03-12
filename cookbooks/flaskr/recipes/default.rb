@@ -14,4 +14,5 @@ end
 
 template '/var/flaskr/flaskr_config.py' do
   source 'flaskr_config.py.erb'
+  owner "vagrant"
 end

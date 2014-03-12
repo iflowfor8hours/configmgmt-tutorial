@@ -1,5 +1,6 @@
 DATABASE='/var/flaskr/data/flaskr.db'
 DEBUG=True
 SECRET_KEY='something very very secret'
-USERNAME='admin'
-PASSWORD='admin'
+USERNAME='<%= node.flaskr.username %>'
+PASSWORD='<%= node.flaskr.password %>'
+LISTEN_ADDRESS='<%= node.flaskr.listen_address %>'

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+. /etc/flaskr.conf
+/usr/bin/python /vagrant/flask/examples/flaskr.py
