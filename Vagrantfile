@@ -14,8 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
-
     chef.add_recipe       "flask"
     chef.add_recipe       "flaskr"
+    chef.add_recipe       "minitest-handler"
   end
 end

@@ -9,6 +9,7 @@
 
 directory '/var/flaskr/data' do
   recursive true
+  owner "vagrant"
 end
 
 template '/var/flaskr/flaskr_config.py' do
