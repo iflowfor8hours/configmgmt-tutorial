@@ -1,6 +1,6 @@
 name             'flask'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+maintainer       'Gen. Urbanski Co.'
+maintainer_email 'general@urbanski.com'
 license          'All rights reserved'
 description      'Installs/Configures flask'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
